@@ -1,0 +1,23 @@
+{
+  "colab_url": "https://colab.research.google.com/drive/1cu7LVkcAXXOebHDUgeGvU-n-tX68GjZA",
+  "notebook_sha256": "24207fa576ed8988c05041a814af5b8bc1af68645867f3df9b298e9aee159642",
+  "code_cells_executed": 6,
+  "execution_counts": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "errors": 0,
+  "epochs": 50,
+  "train_images": 50,
+  "eval_images": 10,
+  "runtime": "Google Colab Tesla T4 CUDA",
+  "python": "3.13.16",
+  "ultralytics": "8.4.208",
+  "torch": "2.14.1+cu130",
+  "source_commit": "f8edd3b",
+  "zip_received": false
+}

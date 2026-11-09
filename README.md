@@ -1,11 +1,11 @@
 # Bài làm — Lê Quang Khải, 2A202603237, L2
 
-- [Báo cáo cá nhân và kết quả thực tế](report/individual/2A202603237_LeQuangKhai.md)
-- [Mở notebook trên Colab](https://colab.research.google.com/github/kasdie/K5-L2-Day02-LeQuangKhai-2A202603237-ObjectDetection/blob/main/notebooks/day2_annotation_to_yolo.ipynb) · [Hướng dẫn chạy/lưu link](BAT-DAU-COLAB.md)
-- [Notebook đã chạy trên Mac, có output](notebooks/day2_annotation_to_yolo_local_executed.ipynb)
-- [Trạng thái hồ sơ](CHUAN_BI_NOP_BAI.md)
+- [Báo cáo cá nhân và bốn câu phân tích từ Colab](report/individual/2A202603237_LeQuangKhai.md)
+- **[Bản Colab đã chạy trên Tesla T4](https://colab.research.google.com/drive/1cu7LVkcAXXOebHDUgeGvU-n-tX68GjZA?usp=sharing)**
+- [Bản sao notebook Colab có output](notebooks/day2_annotation_to_yolo_colab_executed.ipynb)
+- [Hướng dẫn tải ZIP và nộp](BAT-DAU-COLAB.md) · [Trạng thái hồ sơ](CHUAN_BI_NOP_BAI.md)
 
-50 nhãn, 679 box; F1 annotation **0,4895**, mean IoU **0,8335**, giữ `passed=false`. Theo hướng dẫn Lab Coach do học viên cung cấp ngày 10/11/2026, tiếp tục làm đủ bước dù F1 thấp. Đã train/eval YOLO26n local 50 epoch và có đủ ảnh/log/metrics; phiên Colab và xác nhận nộp LMS cần bổ sung bằng tài khoản học viên.
+50 nhãn, 679 box; annotation F1 **0,4895**, mean IoU **0,8335**, giữ `passed=false` và tiếp tục theo hướng dẫn Coach do học viên cung cấp. Colab đã chạy đủ 50 epoch trên đúng 50 train/10 eval; precision **0,409064**, recall **0,233936**, mAP50 **0,270667**, mAP50–95 **0,199550**. Đã lưu notebook, metrics và stdout Colab; đang bổ sung ZIP ảnh/log gốc. Các folder ảnh/log Mac hiện có được ghi rõ nguồn, không coi là ảnh/log Colab. Chưa có xác nhận nộp LMS.
 
 ---
 

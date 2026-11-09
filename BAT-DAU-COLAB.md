@@ -1,5 +1,7 @@
 # Chạy Colab — Lê Quang Khải, 2A202603237
 
+> **Phiên của học viên đã chạy xong:** [Colab Tesla T4](https://colab.research.google.com/drive/1cu7LVkcAXXOebHDUgeGvU-n-tX68GjZA?usp=sharing). Notebook có đủ output train 50 epoch, evaluate và predict 10 ảnh. Bước hiện tại là tải `day2_colab_outputs.zip` trong `/content/Day2-Lab/outputs/` về máy để cập nhật ảnh/log Colab vào repo, sau đó nộp link repo lên LMS. Các bước bên dưới được giữ để tham khảo hoặc chạy lại khi cần.
+
 Repo đã có 50 file nhãn mới nhất, 679 box và notebook đã đặt sẵn `REPO_URL` đúng repo kasdie. Theo học viên cung cấp, Lab Coach cho phép tiếp tục dù F1 thấp; giữ nguyên kết quả chấm thật.
 
 ## Tạo bản Colab của bạn
