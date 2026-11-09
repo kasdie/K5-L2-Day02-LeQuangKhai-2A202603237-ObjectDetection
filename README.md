@@ -1,3 +1,14 @@
+# Bài làm — Lê Quang Khải, 2A202603237, L2
+
+- [Báo cáo cá nhân và kết quả thực tế](report/individual/2A202603237_LeQuangKhai.md)
+- [Mở notebook trên Colab](https://colab.research.google.com/github/kasdie/K5-L2-Day02-LeQuangKhai-2A202603237-ObjectDetection/blob/main/notebooks/day2_annotation_to_yolo.ipynb) · [Hướng dẫn chạy/lưu link](BAT-DAU-COLAB.md)
+- [Notebook đã chạy trên Mac, có output](notebooks/day2_annotation_to_yolo_local_executed.ipynb)
+- [Trạng thái hồ sơ](CHUAN_BI_NOP_BAI.md)
+
+50 nhãn, 679 box; F1 annotation **0,4895**, mean IoU **0,8335**, giữ `passed=false`. Theo hướng dẫn Lab Coach do học viên cung cấp ngày 10/11/2026, tiếp tục làm đủ bước dù F1 thấp. Đã train/eval YOLO26n local 50 epoch và có đủ ảnh/log/metrics; phiên Colab và xác nhận nộp LMS cần bổ sung bằng tài khoản học viên.
+
+---
+
 # Bài thực hành Ngày 2 - Gán nhãn phát hiện vật thể cho ADAS
 
 **Bài cá nhân.** Mỗi học viên tự làm và nộp bộ nhãn của mình. Hạn nộp: **11:59 trưa ngày hôm sau buổi lab (giờ Việt Nam, UTC+7)**. Với buổi ngày 09/11/2026, hạn nộp là **11:59 ngày 10/11/2026**. Nộp bài qua LMS tại [aithucchien.vinuni.edu.vn](https://aithucchien.vinuni.edu.vn).

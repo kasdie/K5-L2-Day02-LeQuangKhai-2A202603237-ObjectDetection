@@ -1,22 +1,19 @@
 # Hồ sơ Day02 — Lê Quang Khải, 2A202603237, L2
 
-**Bản chuẩn bị, chưa đủ điều kiện nộp hoàn chỉnh.**
+## Đã có kết quả thực tế
 
-## Đã có
+- 50 nhãn YOLO, 679 box, checker đạt 50/50; repo kasdie đã có nhãn để Colab clone.
+- Lịch sử nhãn ban đầu 652 box và bản đã sửa 679 box.
+- Gold QC trước/sau: F1 0,4644 → 0,4895; mean IoU 0,8320 → 0,8335. `passed=false` được giữ nguyên. Tiếp tục theo hướng dẫn Lab Coach do học viên cung cấp: F1 thấp được chấp nhận nếu làm đủ bước.
+- [Mini guideline](GUIDELINE_MINI.md), [báo cáo](report/individual/2A202603237_LeQuangKhai.md) và 10 ảnh self-QC bổ sung có AI hỗ trợ.
+- [Notebook YOLO26n local có output](notebooks/day2_annotation_to_yolo_local_executed.ipynb): chạy đủ 50 epoch, giữ đúng 50 train/10 eval.
+- Hai folder [eval_predictions](report/individual/assets/eval_predictions/) và [yolo26_runs](report/individual/assets/yolo26_runs/), metrics/ảnh/CSV đã có trong assets; không chứa checkpoint `.pt`.
+- Precision 0,453994; recall 0,232626; mAP50 0,277476; mAP50–95 0,206158 trên phiên Mac.
 
-- 50 file trong `dataset/labels/train/`, 652 box; checker của lớp đạt 50/50.
-- Commit local `d2ade47` giữ nhãn ban đầu trước khi đọc nội dung gold. Chưa push/khóa nhãn trên hệ thống lớp.
-- Gold evaluation thật trong [outputs/annotation_evaluation.json](outputs/annotation_evaluation.json): F1 0,4644, mean IoU 0,8320, `passed=false`.
-- [Mini guideline](GUIDELINE_MINI.md), [báo cáo cá nhân](report/individual/2A202603237_LeQuangKhai.md) và 10 ảnh nhãn học viên phục vụ rà lại. Tài liệu có AI hỗ trợ, cần học viên xác nhận.
-- File gold, ảnh đối chiếu gold và checkpoint đều giữ riêng ngoài hồ sơ nộp.
+## Phần cần tài khoản học viên
 
-## Cần hoàn tất
+1. Đọc, xác nhận và bổ sung phần phân tích của mình trong guideline/báo cáo theo RULES.md.
+2. [Mở Colab, tạo bản Drive và chạy](BAT-DAU-COLAB.md). Notebook đã đặt đúng URL repo. Lưu link bản đã chạy và ZIP output; cập nhật riêng kết quả/runtime Colab nếu có.
+3. Nộp link repo lên LMS bằng tài khoản học viên và giữ xác nhận. Chưa có xác nhận nộp LMS.
 
-1. Giảng viên xác nhận thứ tự ID/phạm vi gold đang có dấu hiệu khác README. Bộ nhãn cũng cần rà lỗi thực tế, không chỉ sửa ánh xạ ID.
-2. Học viên rà/sửa nhãn, chấm lại bằng gold/schema đã được xác nhận; đạt F1 >= 0,80 và mean IoU >= 0,70. Giữ lịch sử trước/sau.
-3. Tạo repo bằng đúng tài khoản của học viên: `K5-L2-DAY02-LeQuangKhai-2A202603237-ObjectDetection`; push nhãn và hồ sơ. Tài khoản connector đang có không phải tài khoản nộp bài nên chưa sử dụng.
-4. Mở `notebooks/day2_annotation_to_yolo.ipynb` trên Colab, đặt REPO_URL đúng repo đã push, chạy YOLO26n theo split gốc, bổ sung kết quả thực tế.
-5. Đưa 2 folder `eval_predictions/` và `yolo26_runs/` từ kết quả Colab vào `report/individual/assets/`, ghi 4 metrics và link Colab vào báo cáo, trả lời phần phân tích bằng kết quả thật.
-6. Kiểm tra repo không chứa gold/token/checkpoint; nộp link repo lên LMS bằng tài khoản cá nhân và giữ xác nhận nộp.
-
-Không dùng số liệu YOLO11n của tool gợi ý để điền thay số liệu YOLO26n của bài. Chưa có xác nhận nộp LMS.
+Không đưa gold train, archive gold, token hoặc checkpoint lên GitHub/Colab. File gold và bộ đối chiếu riêng vẫn nằm ngoài repo bài nộp. Hạn nộp/gia hạn theo thông báo chính thức của Coach/LMS.

@@ -1,0 +1,41 @@
+{
+  "source": "stdout of executed local notebook evaluation cell; per-class values rounded as printed by Ultralytics",
+  "per_class": [
+    {
+      "name": "car",
+      "images": 10,
+      "instances": 94,
+      "precision": 0.762,
+      "recall": 0.647,
+      "map50": 0.727,
+      "map50_95": 0.508
+    },
+    {
+      "name": "truck",
+      "images": 5,
+      "instances": 5,
+      "precision": 0.857,
+      "recall": 0.2,
+      "map50": 0.259,
+      "map50_95": 0.218
+    },
+    {
+      "name": "bus",
+      "images": 2,
+      "instances": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "map50": 0.0127,
+      "map50_95": 0.00508
+    },
+    {
+      "name": "van",
+      "images": 6,
+      "instances": 12,
+      "precision": 0.197,
+      "recall": 0.0833,
+      "map50": 0.111,
+      "map50_95": 0.0929
+    }
+  ]
+}

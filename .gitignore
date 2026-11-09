@@ -17,3 +17,7 @@ __pycache__/
 
 # Archive gold cung cấp riêng: không đưa lên repo học viên.
 gold_train_labels.rar
+
+*.cache
+
+.ipynb_checkpoints/
