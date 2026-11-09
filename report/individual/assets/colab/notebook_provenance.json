@@ -19,5 +19,6 @@
   "ultralytics": "8.4.208",
   "torch": "2.14.1+cu130",
   "source_commit": "f8edd3b",
-  "zip_received": false
+  "zip_received": false,
+  "stdout_notes": "Text logs keep output values with trailing whitespace removed; original output remains in the saved notebook."
 }
