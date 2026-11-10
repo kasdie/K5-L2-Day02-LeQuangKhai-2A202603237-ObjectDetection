@@ -1,14 +1,14 @@
 {
   "colab_url": "https://colab.research.google.com/drive/1cu7LVkcAXXOebHDUgeGvU-n-tX68GjZA",
-  "notebook_sha256": "24207fa576ed8988c05041a814af5b8bc1af68645867f3df9b298e9aee159642",
+  "notebook_sha256": "d800c88dd3e69f996414a7fb17146989c5c29c38080c46920ad18f1896814f20",
   "code_cells_executed": 6,
   "execution_counts": [
+    1,
     2,
     3,
     4,
     5,
-    6,
-    7
+    6
   ],
   "errors": 0,
   "epochs": 50,
@@ -18,7 +18,10 @@
   "python": "3.13.16",
   "ultralytics": "8.4.208",
   "torch": "2.14.1+cu130",
-  "source_commit": "f8edd3b",
-  "zip_received": false,
+  "source_commit": "9978f16",
+  "zip_received": true,
+  "archive_name": "day2_colab_outputs.zip",
+  "archive_sha256": "7e9b09cc8fed2e3930bccb42ff35701e3cf67c909d63c24de11d91725da7ff81",
+  "archive_metrics_verified": true,
   "stdout_notes": "Text logs keep output values with trailing whitespace removed; original output remains in the saved notebook."
 }

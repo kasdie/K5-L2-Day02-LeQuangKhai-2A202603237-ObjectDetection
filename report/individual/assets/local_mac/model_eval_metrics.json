@@ -1,0 +1,8 @@
+{
+  "precision": 0.4539938569417872,
+  "recall": 0.23262616952248463,
+  "map50": 0.2774763761169164,
+  "map50_95": 0.2061575561120576,
+  "eval_images": 10,
+  "checkpoint": "/Users/phambaovy/Applications/vscode/vf/linh tinh/K5-L2-Day02-ObjectDetection/outputs/yolo26_runs/vehicle_annotation/weights/best.pt"
+}

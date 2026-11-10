@@ -1,23 +1,24 @@
 {
-  "source": "stdout of executed local notebook evaluation cell; per-class values rounded as printed by Ultralytics",
+  "source": "Saved output of evaluation cell in shared Colab notebook; class values rounded as printed by Ultralytics",
+  "colab_url": "https://colab.research.google.com/drive/1cu7LVkcAXXOebHDUgeGvU-n-tX68GjZA",
   "per_class": [
     {
       "name": "car",
       "images": 10,
       "instances": 94,
-      "precision": 0.762,
-      "recall": 0.647,
-      "map50": 0.727,
-      "map50_95": 0.508
+      "precision": 0.836,
+      "recall": 0.652,
+      "map50": 0.74,
+      "map50_95": 0.524
     },
     {
       "name": "truck",
       "images": 5,
       "instances": 5,
-      "precision": 0.857,
+      "precision": 0.663,
       "recall": 0.2,
-      "map50": 0.259,
-      "map50_95": 0.218
+      "map50": 0.24,
+      "map50_95": 0.206
     },
     {
       "name": "bus",
@@ -25,17 +26,17 @@
       "instances": 2,
       "precision": 0.0,
       "recall": 0.0,
-      "map50": 0.0127,
-      "map50_95": 0.00508
+      "map50": 0.0141,
+      "map50_95": 0.00466
     },
     {
       "name": "van",
       "images": 6,
       "instances": 12,
-      "precision": 0.197,
+      "precision": 0.136,
       "recall": 0.0833,
-      "map50": 0.111,
-      "map50_95": 0.0929
+      "map50": 0.0889,
+      "map50_95": 0.0635
     }
   ]
 }

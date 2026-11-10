@@ -1,6 +1,6 @@
 # Báo cáo cá nhân — Lê Quang Khải — Ngày 2 Object Detection
 
-**Trạng thái:** đã hoàn thành annotation, self-QC bổ sung, gold QC trước/sau sửa và train/evaluate/predict YOLO26n trên **Google Colab Tesla T4**. Đang bổ sung ZIP ảnh/log gốc của phiên Colab. Chưa ghi nhận nộp LMS. Báo cáo có AI hỗ trợ; học viên cần đọc, xác nhận và bổ sung nhận xét của mình theo RULES.md.
+**Trạng thái:** đã hoàn thành annotation, self-QC bổ sung, gold QC trước/sau sửa và train/evaluate/predict YOLO26n trên **Google Colab Tesla T4**. Đã có ZIP ảnh/log Colab gốc và hai folder kết quả trong assets. Chưa ghi nhận nộp LMS. Báo cáo có AI hỗ trợ; học viên cần đọc, xác nhận và bổ sung nhận xét của mình theo RULES.md.
 
 ## 1. Thông tin học viên
 
@@ -58,7 +58,7 @@ Quan sát cần thận trọng: gold có xe van ID 1 ở drive_031, xe tải ID 
 - **Tesla T4, CUDA:0, 14913 MiB**, Python **3.13.16**, Torch **2.14.1+cu130**, Ultralytics **8.4.208**.
 - Model **yolo26n.pt**, **50 epoch**, imgsz **640**, seed **20260909** theo notebook lớp.
 - `batch=-1` (auto), log AutoBatch chọn **46**. Phiên Mac trước dùng batch 4; không gán số liệu hai runtime cho nhau.
-- Notebook clone commit **f8edd3b** của repo học viên; xác nhận **50 train + 10 eval**. Eval không tham gia cập nhật trọng số, nhưng được dùng validation/chọn best checkpoint.
+- Notebook clone commit **9978f16** của repo học viên; xác nhận **50 train + 10 eval**. Eval không tham gia cập nhật trọng số, nhưng được dùng validation/chọn best checkpoint.
 - Checkpoint trong phiên Colab: `/content/Day2-Lab/outputs/yolo26_runs/vehicle_annotation/weights/best.pt`; không commit checkpoint.
 - Đã kiểm tra đủ **6 ô code có execution count**, không có output lỗi, log hoàn tất epoch 50/50, evaluate và predict 10/10 ảnh.
 
@@ -82,20 +82,21 @@ Các số tổng hợp lấy nguyên JSON ở ô evaluate, không lấy từ k�
 
 ### Đầu ra và nguồn ảnh
 
-Chưa nhận ZIP gốc từ Colab. Hai folder `assets/eval_predictions/` và `assets/yolo26_runs/` đang có vẫn thuộc **phiên Mac**, không được coi là ảnh/log Colab. Notebook chia sẻ đã xác nhận Colab hoàn tất, có đủ metrics và log dự đoán 10 ảnh; cần tải ZIP để bổ sung các ảnh/CSV gốc của đúng phiên Colab.
+Đã nhận ZIP gốc từ Colab và đối chiếu metrics khớp notebook chia sẻ. Hai folder kết quả ở assets bên dưới là của **phiên Colab T4**. Kết quả Mac trước đó được giữ riêng tại [assets/local_mac/](assets/local_mac/).
 
-- [Metrics Colab đã xác nhận](assets/colab/model_eval_metrics.json) và [metrics từng lớp](assets/colab/model_eval_per_class.json).
-- [Log train Colab](assets/colab/training_stdout.txt), [log evaluate](assets/colab/evaluation_stdout.txt), [log predict 10 ảnh](assets/colab/prediction_stdout.txt).
-- [Ảnh dự đoán phiên Mac để tham khảo, không thay ảnh Colab](assets/eval_predictions/visuals/).
+- [10 ảnh dự đoán Colab](assets/eval_predictions/visuals/).
+- [results.csv Colab theo 50 epoch](assets/yolo26_runs/vehicle_annotation/results.csv).
+- [Confusion matrix Colab](assets/yolo26_runs/vehicle_eval/confusion_matrix.png), [matrix chuẩn hóa](assets/yolo26_runs/vehicle_eval/confusion_matrix_normalized.png), [PR curve](assets/yolo26_runs/vehicle_eval/BoxPR_curve.png).
+- [Metrics Colab](assets/model_eval_metrics.json) và [metrics từng lớp](assets/model_eval_per_class.json).
 
 - [Bằng chứng notebook/runtime](assets/colab/notebook_provenance.json).
 - [Log evaluate Colab có bảng từng lớp](assets/colab/evaluation_stdout.txt).
 
 ### Trả lời bốn câu hỏi phân tích
 
-1. **Lớp recall thấp nhất:** `bus` (ID 2 theo data.yaml), recall **0,000**. Có thể dùng **drive_051** minh họa: nhãn eval gốc có một instance ID 2, nhưng log predict Colab ở conf=0,25 chỉ có **8 car và 1 van**, không có prediction bus. Eval chỉ có 2 instance ID 2, ở drive_051 và drive_058, nên kết luận nhạy với từng lỗi. Cần đối chiếu ảnh và ID khi diễn giải do quan sát lệch schema đã nêu; không suy từ recall 0 rằng model không tạo prediction tên bus ở bất kỳ ảnh nào. Các ảnh khác trong log vẫn có bus. Ảnh Colab gốc sẽ được bổ sung từ ZIP; hiện kết luận dựa trên nhãn eval và log Colab đã lưu, không lấy ảnh Mac làm ảnh Colab.
+1. **Lớp recall thấp nhất:** `bus` (ID 2 theo data.yaml), recall **0,000**. Có thể dùng **drive_051** minh họa: nhãn eval gốc có một instance ID 2, nhưng log predict Colab ở conf=0,25 chỉ có **8 car và 1 van**, không có prediction bus. Eval chỉ có 2 instance ID 2, ở drive_051 và drive_058, nên kết luận nhạy với từng lỗi. Cần đối chiếu ảnh và ID khi diễn giải do quan sát lệch schema đã nêu; không suy từ recall 0 rằng model không tạo prediction tên bus ở bất kỳ ảnh nào. Các ảnh khác trong log vẫn có bus. Xem [ảnh Colab drive_051](assets/eval_predictions/visuals/drive_051.jpg).
 2. **Nếu mAP50 cao nhưng mAP50–95 thấp:** box có thể đúng tương đối ở IoU 0,50 nhưng chưa sát hoặc lệch vị trí/kích thước khi xét các ngưỡng IoU cao hơn. Cần rà box lỏng, biên vật thể bị che/cắt và chất lượng hình học. Trong phiên thực tế mAP50=0,2707, mAP50–95=0,1996 đều còn thấp; không gọi mAP50 hiện tại là cao. Cũng cần xem thiếu vật thể và sai lớp trước khi quy nguyên nhân chỉ cho box.
-3. **Lỗi lớp liên quan guideline:** bản nhãn đầu có xe con trắng gán truck ở drive_046; học viên đã sửa về car. Quy tắc cần nhất quán: SUV/taxi/bán tải theo README thuộc car, tải chở hàng thuộc truck, bus khác van/minivan. Không chọn van làm lớp mặc định cho xe lớn/khó nhận biết, không tách hàng hóa trên xe thành một xe riêng. Train có 501 car nhưng chỉ 19 truck; các lớp ngoài car có recall thấp. Đây là những yếu tố cần kiểm cùng độ phủ và chất lượng nhãn, chưa chứng minh quan hệ nhân quả. Quan sát lệch ID gold/README cũng cần ghi như hạn chế, không đổi nhãn chỉ để tăng điểm.
+3. **Lỗi lớp liên quan guideline:** bản nhãn đầu có xe con trắng gán truck ở drive_046; học viên đã sửa về car. Quy tắc cần nhất quán: SUV/taxi/bán tải theo README thuộc car, tải chở hàng thuộc truck, bus khác van/minivan. Không chọn van làm lớp mặc định cho xe lớn/khó nhận biết, không tách hàng hóa trên xe thành một xe riêng. Train có 501 car nhưng chỉ 19 truck; các lớp ngoài car có recall thấp. Đây là những yếu tố cần kiểm cùng độ phủ và chất lượng nhãn, chưa chứng minh quan hệ nhân quả. Quan sát lệch ID gold/README cũng cần ghi như hạn chế, không đổi nhãn chỉ để tăng điểm. Ví dụ thực tế trong [ảnh Colab drive_051](assets/eval_predictions/visuals/drive_051.jpg), xe đỏ phía trước được dự đoán `van` với confidence 0,99; đây là một ca cần đối chiếu đặc điểm xe và quy tắc `car`/`van` trong guideline, không chỉ tin vào confidence cao.
 4. **Vì sao không dùng 10 ảnh eval để train:** giữ chúng ngoài tập cập nhật trọng số để đánh giá trên ảnh không dùng học trọng số; đưa vào train gây rò rỉ dữ liệu và làm số đo quá lạc quan. Notebook dùng chúng làm validation/chọn best nên không phải test set độc lập. Giữ nguyên split theo đề.
 
 ### Kết quả Mac trước đó — để đối chiếu riêng
@@ -116,7 +117,7 @@ Mac Apple M5/MPS, Python 3.14.10, Torch 2.15.0, Ultralytics 8.4.208, 50 epoch, b
 
 ## 7. Tự đánh giá theo rubric
 
-Đã có 50 nhãn đúng cấu trúc, guideline, gold QC trước/sau và vòng sửa nhãn, phiên YOLO26n Colab chạy đủ 50 epoch, evaluate/predict đúng 10 eval, metrics từng lớp và phần phân tích có AI hỗ trợ. Cần bổ sung ZIP để có đủ hai folder ảnh/log gốc của Colab. F1 chưa đạt ngưỡng script nhưng được báo cáo đúng theo hướng dẫn Coach do học viên cung cấp. Học viên cần xác nhận nội dung và nộp link repo lên LMS; không tự gán điểm hoặc gọi bước chưa có bằng chứng là đã hoàn thành.
+Đã có 50 nhãn đúng cấu trúc, guideline, gold QC trước/sau và vòng sửa nhãn, phiên YOLO26n Colab chạy đủ 50 epoch, evaluate/predict đúng 10 eval, metrics từng lớp và phần phân tích có AI hỗ trợ. Đã có đủ hai folder ảnh/log gốc của Colab. F1 chưa đạt ngưỡng script nhưng được báo cáo đúng theo hướng dẫn Coach do học viên cung cấp. Học viên cần xác nhận nội dung và nộp link repo lên LMS; không tự gán điểm hoặc gọi bước chưa có bằng chứng là đã hoàn thành.
 
 ## 8. Công cụ AI và tài liệu tham khảo
 

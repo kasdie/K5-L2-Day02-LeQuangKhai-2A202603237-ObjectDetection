@@ -5,7 +5,7 @@
 - [Bản sao notebook Colab có output](notebooks/day2_annotation_to_yolo_colab_executed.ipynb)
 - [Hướng dẫn tải ZIP và nộp](BAT-DAU-COLAB.md) · [Trạng thái hồ sơ](CHUAN_BI_NOP_BAI.md)
 
-50 nhãn, 679 box; annotation F1 **0,4895**, mean IoU **0,8335**, giữ `passed=false` và tiếp tục theo hướng dẫn Coach do học viên cung cấp. Colab đã chạy đủ 50 epoch trên đúng 50 train/10 eval; precision **0,409064**, recall **0,233936**, mAP50 **0,270667**, mAP50–95 **0,199550**. Đã lưu notebook, metrics và stdout Colab; đang bổ sung ZIP ảnh/log gốc. Các folder ảnh/log Mac hiện có được ghi rõ nguồn, không coi là ảnh/log Colab. Chưa có xác nhận nộp LMS.
+50 nhãn, 679 box; annotation F1 **0,4895**, mean IoU **0,8335**, giữ `passed=false` và tiếp tục theo hướng dẫn Coach do học viên cung cấp. Colab đã chạy đủ 50 epoch trên đúng 50 train/10 eval; precision **0,409064**, recall **0,233936**, mAP50 **0,270667**, mAP50–95 **0,199550**. Đã nhận và đối chiếu ZIP Colab, có đủ 10 ảnh dự đoán, results.csv 50 epoch, biểu đồ và metrics gốc tại assets. Kết quả Mac được giữ riêng tại assets/local_mac. Chưa có xác nhận nộp LMS.
 
 ---
 

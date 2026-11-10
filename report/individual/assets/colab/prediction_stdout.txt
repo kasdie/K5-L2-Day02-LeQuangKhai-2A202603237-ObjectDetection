@@ -1,15 +1,15 @@
 
-image 1/10 /content/Day2-Lab/dataset/images/eval/drive_051.jpg: 640x640 8 cars, 1 van, 18.0ms
-image 2/10 /content/Day2-Lab/dataset/images/eval/drive_052.jpg: 640x640 11 cars, 1 bus, 19.4ms
-image 3/10 /content/Day2-Lab/dataset/images/eval/drive_053.jpg: 640x640 5 cars, 3 buss, 1 van, 26.2ms
-image 4/10 /content/Day2-Lab/dataset/images/eval/drive_054.jpg: 640x640 5 cars, 1 van, 38.3ms
-image 5/10 /content/Day2-Lab/dataset/images/eval/drive_055.jpg: 640x640 5 cars, 21.3ms
-image 6/10 /content/Day2-Lab/dataset/images/eval/drive_056.jpg: 640x640 15 cars, 1 bus, 3 vans, 21.4ms
-image 7/10 /content/Day2-Lab/dataset/images/eval/drive_057.jpg: 640x640 10 cars, 23.4ms
-image 8/10 /content/Day2-Lab/dataset/images/eval/drive_058.jpg: 640x640 20 cars, 2 buss, 27.1ms
-image 9/10 /content/Day2-Lab/dataset/images/eval/drive_059.jpg: 640x640 5 cars, 1 truck, 1 van, 38.8ms
-image 10/10 /content/Day2-Lab/dataset/images/eval/drive_060.jpg: 640x640 9 cars, 1 bus, 1 van, 33.3ms
-Speed: 1.8ms preprocess, 26.7ms inference, 3.0ms postprocess per image at shape (1, 3, 640, 640)
+image 1/10 /content/Day2-Lab/dataset/images/eval/drive_051.jpg: 640x640 8 cars, 1 van, 16.9ms
+image 2/10 /content/Day2-Lab/dataset/images/eval/drive_052.jpg: 640x640 11 cars, 1 bus, 42.5ms
+image 3/10 /content/Day2-Lab/dataset/images/eval/drive_053.jpg: 640x640 5 cars, 3 buss, 1 van, 48.1ms
+image 4/10 /content/Day2-Lab/dataset/images/eval/drive_054.jpg: 640x640 5 cars, 1 van, 35.3ms
+image 5/10 /content/Day2-Lab/dataset/images/eval/drive_055.jpg: 640x640 5 cars, 21.9ms
+image 6/10 /content/Day2-Lab/dataset/images/eval/drive_056.jpg: 640x640 15 cars, 1 bus, 3 vans, 43.9ms
+image 7/10 /content/Day2-Lab/dataset/images/eval/drive_057.jpg: 640x640 10 cars, 19.3ms
+image 8/10 /content/Day2-Lab/dataset/images/eval/drive_058.jpg: 640x640 20 cars, 2 buss, 25.1ms
+image 9/10 /content/Day2-Lab/dataset/images/eval/drive_059.jpg: 640x640 5 cars, 1 truck, 1 van, 22.5ms
+image 10/10 /content/Day2-Lab/dataset/images/eval/drive_060.jpg: 640x640 9 cars, 1 bus, 1 van, 24.8ms
+Speed: 2.2ms preprocess, 30.0ms inference, 3.4ms postprocess per image at shape (1, 3, 640, 640)
 Results saved to [1m/content/Day2-Lab/outputs/eval_predictions/visuals[0m
 predictions saved to: /content/Day2-Lab/outputs/eval_predictions/visuals
 Đã tạo: /content/Day2-Lab/outputs/day2_colab_outputs.zip

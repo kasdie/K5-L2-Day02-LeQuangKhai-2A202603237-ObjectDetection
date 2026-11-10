@@ -1,0 +1,28 @@
+{
+  "runtime": "local Mac Apple M5 MPS",
+  "python": "3.14.10",
+  "ultralytics": "8.4.208",
+  "torch": "2.15.0",
+  "model": "YOLO26n",
+  "epochs_completed": 50,
+  "imgsz": 640,
+  "batch": 4,
+  "seed": 20260909,
+  "train_images": 50,
+  "eval_images": 10,
+  "annotation_revision": 323,
+  "annotation_boxes": 679,
+  "annotation_f1": 0.4895,
+  "annotation_gate_passed": false,
+  "coach_guidance": "Học viên cung cấp: Lab Coach cho phép F1 thấp nếu làm đủ các bước.",
+  "colab_cloud_run": false,
+  "model_metrics": {
+    "precision": 0.4539938569417872,
+    "recall": 0.23262616952248463,
+    "map50": 0.2774763761169164,
+    "map50_95": 0.2061575561120576,
+    "eval_images": 10,
+    "checkpoint": "/Users/phambaovy/Applications/vscode/vf/linh tinh/K5-L2-Day02-ObjectDetection/outputs/yolo26_runs/vehicle_annotation/weights/best.pt"
+  },
+  "weights_sha256": "4b13ce43bdb088e36e53e379ab0b5e0f1e816c0d4bec8eed3ff1afeecbfca9c4"
+}
