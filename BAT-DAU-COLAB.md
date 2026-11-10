@@ -26,3 +26,11 @@ Repo đã có 50 file nhãn mới nhất, 679 box và notebook đã đặt sẵn
 ## Kết quả đã có trên Mac
 
 Đã hoàn thành một phiên local thật: YOLO26n 50 epoch, 50 train/10 eval, precision 0,453994, recall 0,232626, mAP50 0,277476, mAP50–95 0,206158. Xem [notebook có output](notebooks/day2_annotation_to_yolo_local_executed.ipynb) và [báo cáo](report/individual/2A202603237_LeQuangKhai.md). Đây là bằng chứng chạy local, không phải bằng chứng đã chạy trên Google Colab.
+
+## Nếu /content chỉ còn sample_data
+
+Đây là dấu hiệu runtime hiện tại không còn bộ file của lần chạy trước. Output lưu trong notebook không khôi phục được model/ảnh/ZIP đã mất trên máy tạm. Không cần tạo thêm thư mục rỗng để tìm ZIP.
+
+Mở notebook bản mới từ GitHub, sao chép vào Drive, chọn GPU T4 và chạy tất cả để tạo lại kết quả. Bản mới gọi tải ZIP ngay sau bước predict/đóng gói; lưu ZIP về Downloads trước khi thay đổi hoặc ngắt runtime. Nếu tiếp tục dùng bản Drive cũ, thêm ô code cuối với `from google.colab import files` và `files.download('/content/Day2-Lab/outputs/day2_colab_outputs.zip')`, rồi chạy lại toàn bộ notebook, không chỉ chạy riêng lệnh tải.
+
+[Colab FAQ về vòng đời máy ảo](https://research.google.com/colaboratory/faq.html). Kết quả của lần chạy lại có thể khác; giữ nguyên số liệu thật tương ứng với notebook/ZIP vừa tạo, không trộn với phiên trước.
